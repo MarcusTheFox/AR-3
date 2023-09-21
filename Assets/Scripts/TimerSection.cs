@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerSection : MonoBehaviour
+public class TimerSection : MonoBehaviour, ISection
 {
     [Range(0, 60)]
     [SerializeField] private int _startTimerMinutes = 5;
@@ -14,6 +14,8 @@ public class TimerSection : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
 
     private float _bombTimer;
+
+    public void Interact() { }
 
     private void Start()
     {
@@ -35,8 +37,8 @@ public class TimerSection : MonoBehaviour
 
     private void UpdateText()
     {
-        int m = Mathf.CeilToInt(_bombTimer) / 60;
-        int s = Mathf.CeilToInt(_bombTimer) % 60;
+        int m = Mathf.FloorToInt(_bombTimer) / 60;
+        int s = Mathf.FloorToInt(_bombTimer) % 60;
         int ms = Mathf.CeilToInt(_bombTimer % 1 * 100);
         Debug.Log(_bombTimer);
         _text.text = $"{m:D2}:{s:D2}:{ms:D2}";

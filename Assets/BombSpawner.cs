@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BombSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform _bombSpawnPoint;
     [SerializeField] private Bomb _bombPrefab;
 
     public void Spawn()
     {
-        if (_bombPrefab != null) Instantiate(_bombPrefab, _bombSpawnPoint);
+        if (_bombPrefab != null) Instantiate(_bombPrefab, transform);
     }
 }

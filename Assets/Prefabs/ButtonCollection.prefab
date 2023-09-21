@@ -1842,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &525607340136624412
 Transform:
   m_ObjectHideFlags: 0
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 2381217467057914565}
 --- !u!114 &5420500688538953952
 MonoBehaviour:
@@ -3077,7 +3077,7 @@ MonoBehaviour:
   interactable: {fileID: 5064509053908151418}
   seeItSayItLabel: {fileID: 2709414069193604610}
   seeItSayItLabelText: {fileID: 6802572562566697347}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 7415014624800077028}
   iconCharFont: {fileID: 0}
   iconChar: 0
@@ -3130,7 +3130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2381217467678970666}
   - component: {fileID: 2381217467678970710}
-  - component: {fileID: 2381217467678970711}
   - component: {fileID: 2381217467678970664}
   - component: {fileID: 2381217467678970665}
   m_Layer: 0
@@ -3202,14 +3201,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2381217467678970711
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2381217467678970667}
-  m_Mesh: {fileID: 0}
 --- !u!222 &2381217467678970664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3424,7 +3415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2381217468718116468
 Transform:
   m_ObjectHideFlags: 0
@@ -4442,7 +4433,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3953299894748458969}
   - component: {fileID: 3953299894748458917}
-  - component: {fileID: 3953299894748458916}
   - component: {fileID: 3953299894748458971}
   - component: {fileID: 3953299894748458970}
   m_Layer: 0
@@ -4514,14 +4504,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &3953299894748458916
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953299894748458968}
-  m_Mesh: {fileID: 0}
 --- !u!222 &3953299894748458971
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4653,7 +4635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3953299895201742378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.029999997, y: -0.022, z: 0}
+  m_LocalPosition: {x: 9.313226e-10, y: 0.022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5117,7 +5099,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 3953299895201742390}
 --- !u!114 &6696365891316618259
 MonoBehaviour:
@@ -5135,7 +5117,7 @@ MonoBehaviour:
   interactable: {fileID: 5881694251851845769}
   seeItSayItLabel: {fileID: 3625112209385652977}
   seeItSayItLabelText: {fileID: 5309935621949402480}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 8156112827840399383}
   iconCharFont: {fileID: 0}
   iconChar: 0
@@ -5261,7 +5243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3953299895787590279
 Transform:
   m_ObjectHideFlags: 0
@@ -6246,7 +6228,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 874481182521564450}
 --- !u!114 &684914529098608321
 MonoBehaviour:
@@ -6264,7 +6246,7 @@ MonoBehaviour:
   interactable: {fileID: 1669550329686311242}
   seeItSayItLabel: {fileID: 7580166289866265536}
   seeItSayItLabelText: {fileID: 6020810153554725974}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 7653256515003705035}
   iconCharFont: {fileID: 0}
   iconChar: 0
@@ -6460,7 +6442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7594468442146063869
 Transform:
   m_ObjectHideFlags: 0
@@ -6557,7 +6539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5796163193752371360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.313226e-10, y: 0.022, z: 0}
+  m_LocalPosition: {x: 0.030000001, y: 0.022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7021,7 +7003,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 5796163193752371388}
 --- !u!114 &4198110993146145433
 MonoBehaviour:
@@ -7039,7 +7021,7 @@ MonoBehaviour:
   interactable: {fileID: 3977544037217168899}
   seeItSayItLabel: {fileID: 6116476125482220667}
   seeItSayItLabelText: {fileID: 3394663710322054138}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 1701445450415240861}
   iconCharFont: {fileID: 0}
   iconChar: 0
@@ -7047,7 +7029,7 @@ MonoBehaviour:
   iconSprite: {fileID: 21300000, guid: 20f25674b9512834f88938d45ed495d7, type: 3}
   iconQuadRenderer: {fileID: 5796163195313417226}
   iconQuadTextureNameID: _MainTex
-  iconQuadTexture: {fileID: 2800000, guid: bb1b4a9241fba2042a81428e917afd5d, type: 3}
+  iconQuadTexture: {fileID: 2800000, guid: b5066c514f7f02f4292cf842f3c8b75f, type: 3}
   defaultButtonQuadMaterial: {fileID: 2100000, guid: fa419ab56051229449e3b813df8f295f, type: 2}
   iconSet: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683, type: 2}
   defaultIconSet: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683, type: 2}
@@ -7092,7 +7074,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5796163194205065555}
   - component: {fileID: 5796163194205065519}
-  - component: {fileID: 5796163194205065518}
   - component: {fileID: 5796163194205065553}
   - component: {fileID: 5796163194205065552}
   m_Layer: 0
@@ -7164,14 +7145,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &5796163194205065518
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5796163194205065554}
-  m_Mesh: {fileID: 0}
 --- !u!222 &5796163194205065553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7386,7 +7359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5796163195313417229
 Transform:
   m_ObjectHideFlags: 0
@@ -8955,7 +8928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7761483156312174095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.313226e-10, y: -0.022, z: 0}
+  m_LocalPosition: {x: -0.029999997, y: -0.022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9419,7 +9392,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 4566866971753513587}
 --- !u!114 &4157710014184209367
 MonoBehaviour:
@@ -9437,7 +9410,7 @@ MonoBehaviour:
   interactable: {fileID: 8769266027734126903}
   seeItSayItLabel: {fileID: 9150344806555821632}
   seeItSayItLabelText: {fileID: 738647077389952816}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 2345397372839162778}
   iconCharFont: {fileID: 0}
   iconChar: 0
@@ -9656,7 +9629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8128644931182972160
 Transform:
   m_ObjectHideFlags: 0
@@ -9753,7 +9726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8260411589876545035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030000001, y: 0.022, z: 0}
+  m_LocalPosition: {x: 9.313226e-10, y: -0.022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10217,7 +10190,7 @@ MonoBehaviour:
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: -0.008}
-  bounds: {x: 0.032, y: 0.032}
+  bounds: {x: 0.025, y: 0.04}
   touchableCollider: {fileID: 8554680703045207202}
 --- !u!114 &1110978864804990918
 MonoBehaviour:
@@ -10235,7 +10208,7 @@ MonoBehaviour:
   interactable: {fileID: 2136098349694449136}
   seeItSayItLabel: {fileID: 8757318528219511073}
   seeItSayItLabelText: {fileID: 7767428186977054108}
-  iconStyle: 0
+  iconStyle: 3
   iconCharLabel: {fileID: 4777324667309920376}
   iconCharFont: {fileID: 0}
   iconChar: 0

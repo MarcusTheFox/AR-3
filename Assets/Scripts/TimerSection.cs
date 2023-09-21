@@ -39,6 +39,6 @@ public class TimerSection : MonoBehaviour
         int s = Mathf.CeilToInt(_bombTimer) % 60;
         int ms = Mathf.CeilToInt(_bombTimer % 1 * 100);
         Debug.Log(_bombTimer);
-        _text.text = $"{m}:{s}:{ms}";
+        _text.text = $"{m:D2}:{s:D2}:{ms:D2}";
     }
 }

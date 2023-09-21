@@ -568,6 +568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4037440320445294592, guid: d605d3dda90a9864699d8130440110b7, type: 3}
+      propertyPath: _waitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4037440320445294599, guid: d605d3dda90a9864699d8130440110b7, type: 3}
       propertyPath: m_RootOrder
       value: 4

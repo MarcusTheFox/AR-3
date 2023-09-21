@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
         switch (Phase)
         {
             case Phase.Wait:
-                if (Time.time - _timer < 5)
+                if (Time.time - _timer < _waitTime)
                 {
                     Debug.Log(Time.time);
                 }

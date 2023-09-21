@@ -14,11 +14,11 @@ public class TimerSection : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
 
     private float _bombTimer;
-    //private float _timer;
 
     private void Start()
     {
         _bombTimer = _startTimerMinutes * 60 + _startTimerSeconds;
+        UpdateText();
     }
 
     private void Update()
@@ -30,10 +30,15 @@ public class TimerSection : MonoBehaviour
         }
 
         _bombTimer -= Time.deltaTime;
-        int m = Mathf.RoundToInt(_bombTimer) / 60;
-        int s = Mathf.RoundToInt(_bombTimer) % 60;
-        int ms = Mathf.RoundToInt(_bombTimer % 1 * 100);
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        int m = Mathf.CeilToInt(_bombTimer) / 60;
+        int s = Mathf.CeilToInt(_bombTimer) % 60;
+        int ms = Mathf.CeilToInt(_bombTimer % 1 * 100);
         Debug.Log(_bombTimer);
-        _text.text = m + ":" + s;// + ":" + ms;
+        _text.text = $"{m}:{s}:{ms}";
     }
 }

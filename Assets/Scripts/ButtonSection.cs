@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonSection : MonoBehaviour, ISection
+public class ButtonSection : BaseSection
 {
     [SerializeField] private Collider _collider;
 
@@ -11,7 +11,7 @@ public class ButtonSection : MonoBehaviour, ISection
         Interact();
     }
 
-    public void Interact()
+    public override void Interact()
     {
         if (Bomb.Instance != null)
         {

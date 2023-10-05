@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca5aad39d5da184c867e36dc46a9a1b, type: 3}
+  m_Name: BombConfig
+  m_EditorClassIdentifier: 
+  TimerSection: {fileID: 6457633411786073077, guid: f744f291e52027f4096dd14603237b29, type: 3}
+  EmptySection: {fileID: 2609865246469474510, guid: 9b259b48a0236b2459abd1913b8a10e5, type: 3}
+  Sections:
+  - {fileID: 4752471393038154266, guid: 8c7e7e3da84a7354e95da3448ff84714, type: 3}
+  - {fileID: 6895361017665485916, guid: abe265e96277bda40a7f709e2874faf0, type: 3}
+  - {fileID: 6895361017665485916, guid: abe265e96277bda40a7f709e2874faf0, type: 3}

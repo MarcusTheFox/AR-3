@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waitTime: 2
-  Phase: 3
+  Phase: 0
 --- !u!114 &6991443160182898957
 MonoBehaviour:
   m_ObjectHideFlags: 0

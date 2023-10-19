@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca5aad39d5da184c867e36dc46a9a1b, type: 3}
   m_Name: BombConfig
   m_EditorClassIdentifier: 
-  TimerSection: {fileID: 6457633411786073077, guid: f744f291e52027f4096dd14603237b29, type: 3}
-  EmptySection: {fileID: 2609865246469474510, guid: 9b259b48a0236b2459abd1913b8a10e5, type: 3}
+  TimerSection: {fileID: 8975221154065562708, guid: a88a2b1b9bb1bf141baae8ad47c50d8e, type: 3}
+  EmptySection: {fileID: 6934063360107187762, guid: ef0947786ef2a924c82b88ff465aaeec, type: 3}
   Sections:
-  - {fileID: 4752471393038154266, guid: 8c7e7e3da84a7354e95da3448ff84714, type: 3}
-  - {fileID: 6895361017665485916, guid: abe265e96277bda40a7f709e2874faf0, type: 3}
-  - {fileID: 6895361017665485916, guid: abe265e96277bda40a7f709e2874faf0, type: 3}
+  - {fileID: 1728720555327151193, guid: fc681096223e6fe4ba94f6a87990e4ca, type: 3}
+  - {fileID: 897111000865709930, guid: 0cf0f82e60299ce49a4e5438467e77e8, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}
+  - {fileID: 5076185837640630825, guid: 5d64655aa5ee9574aac1ab6ded5c4432, type: 3}

@@ -5,5 +5,5 @@ public class BombConfig : ScriptableObject
 {
     public TimerSection TimerSection;
     public EmptySection EmptySection;
-    public GameObject[] Sections;
+    public BaseSection[] Sections;
 }

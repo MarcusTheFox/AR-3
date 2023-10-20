@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,7 +303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6497819335467242799, guid: 9a7c24f281a2c3d45a9b8befe608bf77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.046
+      value: -0.017
       objectReference: {fileID: 0}
     - target: {fileID: 6497819335467242799, guid: 9a7c24f281a2c3d45a9b8befe608bf77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -736,14 +736,14 @@ PrefabInstance:
     - target: {fileID: 8010739439468125862, guid: ff457b04c8e6c7d4a81e4e94fd5574c1, type: 3}
       propertyPath: _bombPrefab
       value: 
-      objectReference: {fileID: 4037440320445294592, guid: f9141d558f317264db2351a95bf7ea70, type: 3}
+      objectReference: {fileID: 4037440320445294592, guid: da5684853108f574199d0a2e0571981c, type: 3}
     - target: {fileID: 8010739439468125864, guid: ff457b04c8e6c7d4a81e4e94fd5574c1, type: 3}
       propertyPath: m_Name
       value: BombSpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: 8010739439468125865, guid: ff457b04c8e6c7d4a81e4e94fd5574c1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8010739439468125865, guid: ff457b04c8e6c7d4a81e4e94fd5574c1, type: 3}
       propertyPath: m_LocalPosition.x

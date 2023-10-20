@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -8,6 +6,7 @@ public class Bomb : MonoBehaviour
     [SerializeField] private int _waitTime = 5;
 
     public static Bomb Instance;
+    public SectionController SectionController;
     public Phase Phase = Phase.Wait;
 
     private float _timer;
@@ -15,6 +14,7 @@ public class Bomb : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        SectionController = new SectionController();
         _timer = Time.time;
     }
 
@@ -32,7 +32,7 @@ public class Bomb : MonoBehaviour
                     Phase = Phase.Defuse;
                 }
                 break;
-            case Phase.End:
+            case Phase.Explode:
                 Debug.Log("Dead");
                 Destroy(gameObject);
                 break;
@@ -52,6 +52,6 @@ public enum Phase
 {
     Wait,
     Defuse,
-    End,
+    Explode,
     Stop
 }

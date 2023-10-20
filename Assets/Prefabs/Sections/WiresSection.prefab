@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4431947853202486146}
   - component: {fileID: 7345917576241122309}
   m_Layer: 0
-  m_Name: Wires(Clone)
+  m_Name: WiresSection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

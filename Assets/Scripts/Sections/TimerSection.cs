@@ -18,7 +18,7 @@ public class TimerSection : BaseSection
     private void Update()
     {
         if (Bomb.Instance.Phase != Phase.Defuse) return;
-        if (_bombTimer <= 0) Bomb.Instance.Phase = Phase.End;
+        if (_bombTimer <= 0) Bomb.Instance.Phase = Phase.Explode;
 
         _bombTimer -= Time.deltaTime;
         UpdateText();

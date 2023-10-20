@@ -5,12 +5,11 @@ using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class KeyboardSection : BaseSection
+public class KeyboardSection : SolvableSection
 {
     [SerializeField] private int[] _winPreset = { 1, 0, 3, 2 };
     private readonly List<int> _buttonOrder = new();
     private Interactable[] _buttons;
-    private bool _solved;
     private int _step;
 
     private void Start()
@@ -23,14 +22,13 @@ public class KeyboardSection : BaseSection
             button.OnClick.AddListener(() =>
             {
                 var buttonIndex = Array.IndexOf(_buttons, button);
-                Debug.LogWarning(CheckButton(buttonIndex, _step++));
-
-                Debug.LogWarning(string.Join(", ", _buttonOrder) + " " + _winPreset[buttonIndex]);
-                if (_step == 4)
+                if (!CheckButton(buttonIndex, _step++))
                 {
-                    _solved = true;
-                    GetComponent<MeshRenderer>().material.color = Color.green;
+                    _step = 0;
+                    WrongInteract();
                 }
+
+                if (_step == 4) Interact();
             });
 
         StartCoroutine(ShowButtons());
@@ -38,30 +36,20 @@ public class KeyboardSection : BaseSection
 
     private IEnumerator ShowButtons()
     {
-        while (!_solved)
+        while (!Solved)
         {
             foreach (var buttonIndex in _buttonOrder)
             {
-                var buttonTransform = _buttons[buttonIndex].transform;
-                var lastChildIndex = buttonTransform.childCount - 1;
-                var material = buttonTransform.GetChild(lastChildIndex).GetComponent<Renderer>().material;
-
-                var tempColor = material.color;
-                material.color = Color.white;
-
+                var button = _buttons[buttonIndex].GetComponent<KeyboardButton>();
+                
                 yield return new WaitForSeconds(0.5f);
-                material.color = tempColor;
-
+                button.TurnOn();
                 yield return new WaitForSeconds(0.5f);
+                button.TurnOff();
             }
 
             yield return new WaitForSeconds(2);
         }
-    }
-
-    public override void Interact()
-    {
-        if (Bomb.Instance != null) Bomb.Instance.Phase = Phase.Stop;
     }
 
     private bool CheckButton(int buttonIndex, int step)

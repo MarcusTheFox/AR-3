@@ -13,7 +13,7 @@ public class KeyboardButton : MonoBehaviour
 
     public void TurnOn()
     {
-        _button.material.color = Color.white;
+        _button.material.color = _highlightColor;
     }
 
     public void TurnOff()

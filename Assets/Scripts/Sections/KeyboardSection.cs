@@ -28,10 +28,18 @@ public class KeyboardSection : SolvableSection
                     WrongInteract();
                 }
 
-                if (_step == 4) Interact();
+                if (_step == 4)
+                    Interact();
             });
 
         StartCoroutine(ShowButtons());
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+        foreach (var button in _buttons)
+            button.OnClick.RemoveAllListeners();
     }
 
     private IEnumerator ShowButtons()

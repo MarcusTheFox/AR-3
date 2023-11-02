@@ -188,6 +188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waitTime: 2
+  _startTimerMinutes: 4
+  _startTimerSeconds: 0
+  _bombConfig: {fileID: 11400000, guid: d959eddb60ab1084bb6472053cf6bb32, type: 2}
   Phase: 0
 --- !u!114 &6991443160182898957
 MonoBehaviour:
@@ -203,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topGrid: {fileID: 64622212379712778}
   _bottomGrid: {fileID: 3855335082735608274}
-  _bombConfig: {fileID: 11400000, guid: 52e9f2397de5dab4ea8ddc1e69d5baf3, type: 2}
+  _sectionsConfig: {fileID: 11400000, guid: 52e9f2397de5dab4ea8ddc1e69d5baf3, type: 2}
 --- !u!1 &5756672828682328849
 GameObject:
   m_ObjectHideFlags: 0

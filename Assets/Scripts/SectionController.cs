@@ -1,7 +1,12 @@
+using System.Collections.Generic;
+using Sections;
+
 public class SectionController
 {
+    public TimerSection TimerSection;
+    public readonly List<ISolvable> SolvableSections = new();
     private int _countSections;
-    private int _countSolvedSections;
+    public int CountSolvedSections { get; private set; }
 
     public void RegisterSection(ISolvable section)
     {
@@ -11,6 +16,7 @@ public class SectionController
         section.OnSectionSolved += IncreaseCountSolvedSections;
         section.OnSectionWrongSolved += SectionWrongSolved;
         section.OnSectionSolved += () => UnregisterSection(section);
+        SolvableSections.Add(section);
     }
 
     private void UnregisterSection(ISolvable section)
@@ -20,7 +26,7 @@ public class SectionController
 
     private void IncreaseCountSolvedSections()
     {
-        if (++_countSolvedSections == _countSections) Bomb.Instance.Phase = Phase.Stop;
+        if (++CountSolvedSections == _countSections) Bomb.Instance.Phase = Phase.Stop;
     }
 
     private void SectionWrongSolved()

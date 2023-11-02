@@ -1,24 +1,25 @@
+using Configs.Scripts;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
     public static Bomb Instance;
 
-    [Range(60, 0)] [SerializeField] private int _waitTime = 5;
-    [Range(0, 60)] [SerializeField] private int _startTimerMinutes = 5;
-    [Range(0, 59)] [SerializeField] private int _startTimerSeconds;
+    [HideInInspector] public Phase Phase = Phase.Wait;
 
-    public Phase Phase = Phase.Wait;
+    [SerializeField] private BombConfig _bombConfig;
 
     private float _timer;
+
     public SectionController SectionController;
+
     public float BombTimer { get; private set; }
 
     private void Start()
     {
         Instance = this;
         SectionController = new SectionController();
-        BombTimer = _startTimerMinutes * 60 + _startTimerSeconds;
+        BombTimer = _bombConfig.StartTimerMinutes * 60 + _bombConfig.StartTimerSeconds;
         _timer = Time.time;
     }
 
@@ -27,8 +28,8 @@ public class Bomb : MonoBehaviour
         switch (Phase)
         {
             case Phase.Wait:
-                if (Time.time - _timer < _waitTime)
-                    Debug.Log(Time.time);
+                if (Time.time - _timer < _bombConfig.WaitTime) ;
+                    // Debug.Log(Time.time);
                 else
                     Phase = Phase.Defuse;
                 break;

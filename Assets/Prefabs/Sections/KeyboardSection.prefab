@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulb: {fileID: 1898543927721338976}
   _winPreset: 01000000000000000300000002000000
+  _config: {fileID: 11400000, guid: aacb5667c7ee0c440a929478d9a224c2, type: 2}
 --- !u!1001 &109992514781984384
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,20 +1,31 @@
+using System;
 using TMPro;
 using UnityEngine;
 
-public class TimerSection : BaseSection
+namespace Sections
 {
-    [SerializeField] private TextMeshProUGUI _text;
-
-    private void Update()
+    public class TimerSection : BaseSection
     {
-        UpdateText(Bomb.Instance.BombTimer);
-    }
+        [SerializeField] private TextMeshProUGUI _text;
 
-    private void UpdateText(float timer)
-    {
-        var m = Mathf.FloorToInt(timer) / 60;
-        var s = Mathf.FloorToInt(timer) % 60;
-        var ms = Mathf.CeilToInt(timer % 1 * 100);
-        _text.text = $"{m:D2}:{s:D2}:{ms:D2}";
+        private void Update()
+        {
+            UpdateText(Bomb.Instance.BombTimer);
+        }
+
+        private void UpdateText(float timer)
+        {
+            var m = GetMinutes();
+            var s = Mathf.FloorToInt(timer) % 60;
+            var ms = Mathf.CeilToInt(timer % 1 * 100);
+            _text.text = m > 0 ? $"{m:D2}:{s:D2}" : $"{s:D2}:{ms:D2}";
+        }
+
+        public int GetMinutes() => Mathf.FloorToInt(Bomb.Instance.BombTimer) / 60;
+
+        public string GetTime()
+        {
+            return _text.text;
+        }
     }
 }

@@ -1134,6 +1134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulb: {fileID: 2941099203749337724}
+  _buttonRenderer: {fileID: 4696303230763157062}
+  _color1: {r: 1, g: 1, b: 1, a: 0}
+  _color2: {r: 1, g: 0.5, b: 0.5, a: 0}
 --- !u!1 &4274947977142311897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,19 +1513,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 087b16002c2b0b445baa3ed3beae44a9, type: 2}
   OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5864910233458996458}
-        m_TargetAssemblyTypeName: ButtonSection, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Events:
   - Event:
       m_PersistentCalls:
@@ -1638,6 +1629,18 @@ MonoBehaviour:
             m_Arguments:
               m_ObjectArgument: {fileID: 8300000, guid: 40ae713ddf420714bbc1a3b5c3f2eac1, type: 3}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 5864910233458996458}
+            m_TargetAssemblyTypeName: ButtonSection, Assembly-CSharp
+            m_MethodName: OnButtonUp
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae5adbc153db104d9f0a5785b510b05, type: 3}
   m_Name: BombConfig
   m_EditorClassIdentifier: 
-  TimerSection: {fileID: 0}
-  EmptySection: {fileID: 0}
-  Sections: []
+  WaitTime: 5
+  StartTimerMinutes: 3
+  StartTimerSeconds: 0

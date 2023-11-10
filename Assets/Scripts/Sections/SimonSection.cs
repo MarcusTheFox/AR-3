@@ -9,9 +9,9 @@ using Random = UnityEngine.Random;
 
 namespace Sections
 {
-    public class KeyboardSection : SolvableSection
+    public class SimonSection : SolvableSection
     {
-        [SerializeField] private KeyboardSectionConfig _config;
+        [SerializeField] private SimonSectionConfig _config;
         private readonly List<int> _buttonOrder = new();
         private Interactable[] _buttons;
         private int _step;
@@ -51,7 +51,7 @@ namespace Sections
             {
                 foreach (var buttonIndex in _buttonOrder)
                 {
-                    var button = _buttons[buttonIndex].GetComponent<KeyboardButton>();
+                    var button = _buttons[buttonIndex].GetComponent<SimonButton>();
                 
                     yield return new WaitForSeconds(0.5f);
                     button.TurnOn();

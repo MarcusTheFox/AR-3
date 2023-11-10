@@ -2,22 +2,10 @@ using UnityEngine;
 
 public class KeyboardButton : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer _button;
-    [SerializeField] private Color _highlightColor;
-    private Color _originalColor;
+    [SerializeField] private MeshRenderer _indicator;
 
-    private void Start()
+    public void Click()
     {
-        _originalColor = _button.material.color;
-    }
-
-    public void TurnOn()
-    {
-        _button.material.color = _highlightColor;
-    }
-
-    public void TurnOff()
-    {
-        _button.material.color = _originalColor;
+        _indicator.material.color = Color.green;
     }
 }

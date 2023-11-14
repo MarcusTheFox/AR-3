@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 8463678985734762377}
   - component: {fileID: 8463678985734762376}
   - component: {fileID: 8463678985734762379}
+  - component: {fileID: 2964826807842684709}
   m_Layer: 0
   m_Name: KeyboardSection
   m_TagString: Untagged
@@ -200,6 +201,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2964826807842684709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8463678985734762381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef470af0f86c324db9b336751d403e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulb: {fileID: 2981313180461352388}
+  _config: {fileID: 11400000, guid: dbe7fbd87afccd04f92ea298a20f4215, type: 2}
 --- !u!1001 &1140546507957093729
 PrefabInstance:
   m_ObjectHideFlags: 0

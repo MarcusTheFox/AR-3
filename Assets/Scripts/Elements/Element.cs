@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Elements
 {
-    public class Battery : Element
+    public abstract class Element : MonoBehaviour
     {
     }
 }

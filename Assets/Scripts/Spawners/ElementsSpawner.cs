@@ -10,6 +10,8 @@ namespace Spawners
     {
         [SerializeField] private GameObject _batteriesPositions;
         [SerializeField] private GameObject[] _batteriesPrefab;
+        
+        public int BatteriesCount { get; private set; } 
 
         private void Start()
         {
@@ -18,12 +20,18 @@ namespace Spawners
 
             for (int i = 0; i < count; i++)
             {
-                var spawnPoint = childs.PopRandom().element;
-                var battery = Instantiate(_batteriesPrefab.GetRandomElement()).transform;
-                battery.SetParent(spawnPoint);
-                battery.localRotation = Quaternion.identity;
-                battery.localPosition = Vector3.zero;
+                SpawnElement(_batteriesPrefab.GetRandomElement(), childs.PopRandom().element);
             }
+
+            BatteriesCount = _batteriesPositions.GetComponentsInChildren<Battery>().Length;
+        }
+
+        private void SpawnElement(GameObject prefab, Transform spawnPoint)
+        {
+            var element = Instantiate(prefab).transform;
+            element.SetParent(spawnPoint);
+            element.localRotation = Quaternion.identity;
+            element.localPosition = Vector3.zero;
         }
     }
 }

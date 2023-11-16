@@ -1,6 +1,4 @@
-using Configs.Scripts;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Sections
 {
@@ -9,11 +7,12 @@ namespace Sections
         [SerializeField] private Renderer _buttonRenderer;
         [SerializeField] private Color _color1;
         [SerializeField] private Color _color2;
-        [SerializeField] private string _text1;
-        [SerializeField] private string _text2;
-    
-        private bool _variant;
+
         private TimerSection _timer;
+        // [SerializeField] private string _text1;
+        // [SerializeField] private string _text2;
+
+        private bool _variant;
 
         private void Awake()
         {
@@ -30,11 +29,23 @@ namespace Sections
         {
             if (_variant)
             {
-                Interact();
+                if (Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 0)
+                {
+                    Interact();
+                }
+                else
+                {
+                    if (_timer.GetTime().IndexOf('1') > -1)
+                        Interact();
+                    else
+                        WrongInteract();
+                }
             }
             else
             {
-                if (_timer.GetTime().IndexOf('3') > -1)
+                var number = Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 0 ? '3' : '5';
+
+                if (_timer.GetTime().IndexOf(number) > -1)
                     Interact();
                 else
                     WrongInteract();

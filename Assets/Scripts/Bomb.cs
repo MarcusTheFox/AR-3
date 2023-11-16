@@ -1,8 +1,13 @@
 using Configs.Scripts;
+using Microsoft.MixedReality.Toolkit.Utilities;
+using Spawners;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bomb : MonoBehaviour
 {
+    public UnityEvent OnBombExploded;
+    public UnityEvent OnBombSolved;
     public static Bomb Instance;
 
     [HideInInspector] public Phase Phase = Phase.Wait;
@@ -12,6 +17,7 @@ public class Bomb : MonoBehaviour
     private float _timer;
 
     public SectionController SectionController;
+    [HideInInspector] public ElementsSpawner ElementsSpawner;
 
     public float BombTimer { get; private set; }
 
@@ -19,6 +25,7 @@ public class Bomb : MonoBehaviour
     {
         Instance = this;
         SectionController = new SectionController();
+        ElementsSpawner = GetComponent<ElementsSpawner>();
         BombTimer = _bombConfig.StartTimerMinutes * 60 + _bombConfig.StartTimerSeconds;
         _timer = Time.time;
     }
@@ -28,9 +35,7 @@ public class Bomb : MonoBehaviour
         switch (Phase)
         {
             case Phase.Wait:
-                if (Time.time - _timer < _bombConfig.WaitTime) ;
-                    // Debug.Log(Time.time);
-                else
+                if (Time.time - _timer >= _bombConfig.WaitTime)
                     Phase = Phase.Defuse;
                 break;
 
@@ -41,11 +46,13 @@ public class Bomb : MonoBehaviour
 
             case Phase.Explode:
                 Debug.Log("Dead");
+                OnBombExploded?.Invoke();
                 Destroy(gameObject);
                 break;
 
             case Phase.Stop:
                 Debug.Log("You win!!!");
+                OnBombSolved?.Invoke();
                 break;
         }
     }

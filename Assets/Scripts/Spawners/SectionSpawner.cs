@@ -13,7 +13,7 @@ public class SectionSpawner : MonoBehaviour
 
     private readonly List<BaseSection> _sectionList = new();
 
-    public void Start()
+    private void Start()
     {
         FillSectionList(_sectionList);
         for (var i = 0; i < 12; i++)
@@ -22,7 +22,7 @@ public class SectionSpawner : MonoBehaviour
             var section = Instantiate(sectionPrefab).transform;
 
             section.parent = (i < 6 ? _topGrid : _bottomGrid).transform;
-            section.localRotation = section.rotation;
+            section.localRotation = Quaternion.Euler(-90, 0, 0);
             section.localPosition = Vector3.zero;
             
             Bomb.Instance.SectionController.RegisterSection(section.GetComponent<ISolvable>());

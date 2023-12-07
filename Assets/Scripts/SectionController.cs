@@ -26,7 +26,7 @@ public class SectionController
 
     private void IncreaseCountSolvedSections()
     {
-        if (++CountSolvedSections == _countSections) Bomb.Instance.Phase = Phase.Stop;
+        if (++CountSolvedSections == _countSections) Bomb.Instance.Phase = Phase.Win;
     }
 
     private void SectionWrongSolved()

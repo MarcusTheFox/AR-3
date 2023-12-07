@@ -65,8 +65,17 @@ namespace Sections
 
         private bool CheckButton(int buttonIndex, int step)
         {
-            var presetIndex = Bomb.Instance.SectionController.TimerSection.GetMinutes();
+            // var presetIndex = Bomb.Instance.SectionController.TimerSection.GetMinutes();
+            // presetIndex = Mathf.Min(presetIndex, _config.ButtonsPreset.Length - 1);
+            int presetIndex = 0;
+            bool bat = Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 1;
+            bool ser = Bomb.Instance.SeriesNumber.HasVowels;
+            if (!bat && !ser) presetIndex = 0;
+            else if (bat && !ser) presetIndex = 1;
+            else if (!bat && ser) presetIndex = 2;
+            else if (bat && ser) presetIndex = 3;
             presetIndex = Mathf.Min(presetIndex, _config.ButtonsPreset.Length - 1);
+            
             var clicked = _config.ButtonsPreset[presetIndex].Preset[buttonIndex];
             var correct = _buttonOrder[step];
             return clicked == correct;

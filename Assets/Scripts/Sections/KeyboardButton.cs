@@ -1,18 +1,27 @@
 using TMPro;
 using UnityEngine;
 
-public class KeyboardButton : MonoBehaviour
+namespace Sections
 {
-    [SerializeField] private MeshRenderer _indicator;
-    [SerializeField] private TextMeshPro _text;
-    public char Symbol
+    public class KeyboardButton : MonoBehaviour
     {
-        get => _text.text[0];
-        set => _text.text = $"{value}";
-    }
+        [SerializeField] private MeshRenderer _indicator;
+        [SerializeField] private TextMeshPro _text;
+        private bool _clicked;
+    
+        public char Symbol
+        {
+            get => _text.text[0];
+            set => _text.text = $"{value}";
+        }
 
-    public void Click()
-    {
-        _indicator.material.color = Color.green;
+        public void Click()
+        {
+            if (!_clicked)
+            {
+                _clicked = true;
+                _indicator.material.color = Color.green;
+            }
+        }
     }
 }

@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: BombConfig
   m_EditorClassIdentifier: 
   WaitTime: 5
-  StartTimerMinutes: 3
+  StartTimerMinutes: 5
   StartTimerSeconds: 0
+  ExplodeSound: {fileID: 8300000, guid: 0ec090e04c15e704ab9f402fdb83379b, type: 3}
+  Win1Sound: {fileID: 8300000, guid: d75c20a32cf2aad4fb2b49ff5f3972dd, type: 3}
+  Win2Sound: {fileID: 8300000, guid: 422a47c52673fcd4d90a0ef09f78d727, type: 3}

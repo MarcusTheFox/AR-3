@@ -1,16 +1,30 @@
 using System;
 using TMPro;
 using UnityEngine;
+using Debug = Sisus.Debugging.Debug;
 
 namespace Sections
 {
     public class TimerSection : BaseSection
     {
         [SerializeField] private TextMeshProUGUI _text;
+        private AudioSource _audio;
+        private int _lastSecond;
+
+        private void Start()
+        {
+            _audio = GetComponent<AudioSource>();
+            _lastSecond = GetSeconds();
+        }
 
         private void Update()
         {
             UpdateText(Bomb.Instance.BombTimer);
+            if (_lastSecond != GetSeconds())
+            {
+                _audio.Play();
+                _lastSecond = GetSeconds();
+            }
         }
 
         private void UpdateText(float timer)
@@ -22,6 +36,7 @@ namespace Sections
         }
 
         public int GetMinutes() => Mathf.FloorToInt(Bomb.Instance.BombTimer) / 60;
+        public int GetSeconds() => Mathf.FloorToInt(Bomb.Instance.BombTimer) % 60;
 
         public string GetTime()
         {

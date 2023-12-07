@@ -3,7 +3,9 @@ guid: 327df13e4b29d4b4694ff69c594448e5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _bombConfig: {fileID: 11400000, guid: d959eddb60ab1084bb6472053cf6bb32, type: 2}
+  - ElementsSpawner: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

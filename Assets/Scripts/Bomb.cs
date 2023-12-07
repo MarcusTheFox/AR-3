@@ -1,3 +1,4 @@
+using System.Collections;
 using Configs.Scripts;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Spawners;
@@ -12,22 +13,27 @@ public class Bomb : MonoBehaviour
 
     [HideInInspector] public Phase Phase = Phase.Wait;
 
-    [SerializeField] private BombConfig _bombConfig;
-
+    [field: SerializeField] public BombConfig BombConfig { get; private set; }
     private float _timer;
 
     public SectionController SectionController;
-    [HideInInspector] public ElementsSpawner ElementsSpawner;
+    public ElementsSpawner ElementsSpawner { get; private set; }
+    public SeriesNumber SeriesNumber { get; private set; } 
 
     public float BombTimer { get; private set; }
+    
+    private void Awake()
+    {
+        BombTimer = BombConfig.StartTimerMinutes * 60 + BombConfig.StartTimerSeconds;
+        _timer = Time.time;
+    }
 
     private void Start()
     {
         Instance = this;
         SectionController = new SectionController();
         ElementsSpawner = GetComponent<ElementsSpawner>();
-        BombTimer = _bombConfig.StartTimerMinutes * 60 + _bombConfig.StartTimerSeconds;
-        _timer = Time.time;
+        SeriesNumber = GetComponentInChildren<SeriesNumber>();
     }
 
     private void Update()
@@ -35,7 +41,7 @@ public class Bomb : MonoBehaviour
         switch (Phase)
         {
             case Phase.Wait:
-                if (Time.time - _timer >= _bombConfig.WaitTime)
+                if (Time.time - _timer >= BombConfig.WaitTime)
                     Phase = Phase.Defuse;
                 break;
 
@@ -45,20 +51,34 @@ public class Bomb : MonoBehaviour
                 break;
 
             case Phase.Explode:
-                Debug.Log("Dead");
-                OnBombExploded?.Invoke();
-                Destroy(gameObject);
+                Explode();
+                Phase = Phase.Stop;
                 break;
 
-            case Phase.Stop:
-                Debug.Log("You win!!!");
-                OnBombSolved?.Invoke();
+            case Phase.Win:
+                Win();
+                Phase = Phase.Stop;
                 break;
         }
     }
 
+    private void Explode()
+    {
+        Debug.Log("Dead");
+        OnBombExploded?.Invoke();
+        Destroy(gameObject);
+    }
+
+    private void Win()
+    {
+        Debug.Log("You win!!!");
+        OnBombSolved?.Invoke();
+    }
+
     private void OnDestroy()
     {
+        OnBombExploded.RemoveAllListeners();
+        OnBombSolved.RemoveAllListeners();
         Instance = null;
     }
 }
@@ -68,5 +88,6 @@ public enum Phase
     Wait,
     Defuse,
     Explode,
+    Win,
     Stop
 }

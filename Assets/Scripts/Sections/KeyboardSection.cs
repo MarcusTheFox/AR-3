@@ -45,10 +45,7 @@ namespace Sections
                 });
             }
 
-            Debug.Log(_answer);
             _answer.Sort(SortByOrder);
-            Debug.Log(_answer);
-            Debug.Log(_order);
         }
 
         private int SortByOrder(char x, char y)

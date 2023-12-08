@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Configs.Scripts;
 using Microsoft.MixedReality.Toolkit.Utilities;
+using Redcode.Extensions;
 using Sections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SectionSpawner : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class SectionSpawner : MonoBehaviour
         FillSectionList(_sectionList);
         for (var i = 0; i < 12; i++)
         {
-            var sectionPrefab = PopRandomBaseSection(_sectionList);
+            var sectionPrefab = _sectionList.PopRandom().element;
             var section = Instantiate(sectionPrefab).transform;
 
             section.parent = (i < 6 ? _topGrid : _bottomGrid).transform;
@@ -32,14 +32,6 @@ public class SectionSpawner : MonoBehaviour
         }
         _topGrid.UpdateCollection();
         _bottomGrid.UpdateCollection();
-    }
-    
-    private BaseSection PopRandomBaseSection(IList<BaseSection> list)
-    {
-        var randomIndex = Random.Range(0, list.Count);
-        var section = list[randomIndex];
-        list.RemoveAt(randomIndex);
-        return section;
     }
 
     private void FillSectionList(ICollection<BaseSection> list, int listLength = 12)

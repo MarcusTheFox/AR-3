@@ -16,8 +16,6 @@ public class BombSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        if (_bombInstance) Destroy(_bombInstance.gameObject);
-        
         transform.parent = null;
         if (_bombPrefab != null)
         {

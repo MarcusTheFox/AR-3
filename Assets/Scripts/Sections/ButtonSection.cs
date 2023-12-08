@@ -9,30 +9,25 @@ namespace Sections
         [SerializeField] private Color _color2;
 
         private TimerSection _timer;
-        // [SerializeField] private string _text1;
-        // [SerializeField] private string _text2;
+
+        private int _batteries;
 
         private bool _variant;
 
-        private void Awake()
+        private void Start()
         {
             _variant = Random.Range(0, 2) == 0;
             _buttonRenderer.material.color = _variant ? _color1 : _color2;
-        }
-
-        private void Start()
-        {
             _timer = Bomb.Instance.SectionController.TimerSection;
+            _batteries = Bomb.Instance.ElementsSpawner.BatteriesCount;
         }
 
         public void OnButtonUp()
         {
             if (_variant)
             {
-                if (Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 0)
-                {
+                if (_batteries % 2 == 0)
                     Interact();
-                }
                 else
                 {
                     if (_timer.GetTime().IndexOf('1') > -1)
@@ -43,7 +38,7 @@ namespace Sections
             }
             else
             {
-                var number = Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 0 ? '3' : '5';
+                var number = _batteries % 2 == 0 ? '3' : '5';
 
                 if (_timer.GetTime().IndexOf(number) > -1)
                     Interact();

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Configs.Scripts;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
@@ -65,8 +64,6 @@ namespace Sections
 
         private bool CheckButton(int buttonIndex, int step)
         {
-            // var presetIndex = Bomb.Instance.SectionController.TimerSection.GetMinutes();
-            // presetIndex = Mathf.Min(presetIndex, _config.ButtonsPreset.Length - 1);
             int presetIndex = 0;
             bool bat = Bomb.Instance.ElementsSpawner.BatteriesCount % 2 == 1;
             bool ser = Bomb.Instance.SeriesNumber.HasVowels;

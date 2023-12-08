@@ -22,6 +22,7 @@ public class SectionController
     private void UnregisterSection(ISolvable section)
     {
         section.OnSectionSolved = null;
+        section.OnSectionWrongSolved = null;
     }
 
     private void IncreaseCountSolvedSections()

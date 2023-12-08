@@ -1,6 +1,4 @@
-using System.Collections;
 using Configs.Scripts;
-using Microsoft.MixedReality.Toolkit.Utilities;
 using Spawners;
 using UnityEngine;
 using UnityEngine.Events;
@@ -64,14 +62,12 @@ public class Bomb : MonoBehaviour
 
     private void Explode()
     {
-        Debug.Log("Dead");
         OnBombExploded?.Invoke();
         Destroy(gameObject);
     }
 
     private void Win()
     {
-        Debug.Log("You win!!!");
         OnBombSolved?.Invoke();
     }
 
